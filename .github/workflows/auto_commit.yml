@@ -1,0 +1,149 @@
+name: Auto Commit
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # Run once per hour
+  workflow_dispatch:
+
+jobs:
+  auto_commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Set Git Config
+        run: |
+          git config --global user.name "Boldchingis"
+          git config --global user.email "bboldchingis@gmail.com"
+
+      - name: Check if should commit
+        id: should_commit
+        run: |
+          # Get current day (1-7, where 1 is Monday, 7 is Sunday)
+          DAY_OF_WEEK=$(date +%u)
+          HOUR=$(date +%H)
+          
+          # 90% chance to skip on weekends, 10% chance to commit (occasional weekend work)
+          if [ $DAY_OF_WEEK -ge 6 ]; then  # Saturday or Sunday
+            if [ $((RANDOM % 10)) -gt 1 ]; then  # 90% chance to skip
+              echo "Skipping commit on weekend"
+              echo "should_commit=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          # Work hours (9 AM to 6 PM) have higher chance of commits
+          elif [ $HOUR -ge 9 ] && [ $HOUR -lt 18 ]; then
+            # 60% chance to commit during work hours
+            if [ $((RANDOM % 10)) -lt 4 ]; then  # 40% chance to skip
+              echo "Skipping commit during work hours"
+              echo "should_commit=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          else
+            # 80% chance to skip outside work hours
+            if [ $((RANDOM % 10)) -lt 8 ]; then  # 80% chance to skip
+              echo "Skipping commit outside work hours"
+              echo "should_commit=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          fi
+          
+          # Determine number of commits (1-4 per hour, with higher probability of 1-2)
+          RAND=$((RANDOM % 100))
+          if [ $RAND -lt 40 ]; then
+            COMMIT_COUNT=1
+          elif [ $RAND -lt 70 ]; then
+            COMMIT_COUNT=2
+          elif [ $RAND -lt 90 ]; then
+            COMMIT_COUNT=3
+          else
+            COMMIT_COUNT=4  # 10% chance of 4 commits
+          fi
+          
+          echo "Should make $COMMIT_COUNT commits this hour"
+          echo "commit_count=$COMMIT_COUNT" >> $GITHUB_OUTPUT
+          echo "should_commit=true" >> $GITHUB_OUTPUT
+
+      - name: Make commits
+        if: steps.should_commit.outputs.should_commit == 'true'
+        run: |
+          for ((i=1; i<=${{ steps.should_commit.outputs.commit_count }}; i++))
+          do
+            # Generate a random time within the hour
+            RANDOM_MINUTES=$((RANDOM % 60))
+            RANDOM_SECONDS=$((RANDOM % 60))
+            
+            # Generate a random commit message with more variety
+            FEATURES=("user authentication" "API endpoints" "UI components" "database schema" "error handling" "form validation" "responsive design" "caching layer" "API documentation" "test coverage")
+            FIXES=("bug" "typo" "performance issue" "memory leak" "race condition" "UI glitch" "broken link" "security vulnerability" "build error" "test failure")
+            IMPROVEMENTS=("refactor" "optimize" "clean up" "reorganize" "update dependencies" "improve error messages" "enhance performance" "add logging" "update docs" "improve tests")
+            
+            # Different types of changes with different probabilities
+            CHANGE_TYPE=$((RANDOM % 10))
+            if [ $CHANGE_TYPE -lt 4 ]; then  # 40% chance for feature
+              MSG_TYPE="feat"
+              MSG="add ${FEATURES[$RANDOM % ${#FEATURES[@]}]}"
+            elif [ $CHANGE_TYPE -lt 8 ]; then  # 40% chance for fix
+              MSG_TYPE="fix"
+              MSG="fix ${FIXES[$RANDOM % ${#FIXES[@]}]}"
+            else  # 20% chance for improvement
+              MSG_TYPE="chore"
+              MSG="${IMPROVEMENTS[$RANDOM % ${#IMPROVEMENTS[@]}]}"
+            fi
+            
+            # Add some detail to the message
+            DETAILS=("" "" "" "" "" "" "" "" "" "" "" "" "" "naming convention" "code style" "for better performance" "to improve UX" "to fix edge case")
+            DETAIL="${DETAILS[$RANDOM % ${#DETAILS[@]}]}"
+            
+            # Create a more realistic commit message
+            COMMIT_MSG="$MSG_TYPE: $MSG"
+            [ -n "$DETAIL" ] && COMMIT_MSG="$COMMIT_MSG $DETAIL"
+            
+            # Create a small change in different files
+            TIMESTAMP=$(TZ='Asia/Ulaanbaatar' date '+%Y-%m-%d %H:%M:%S %Z')
+            
+            # Choose a random file to modify
+            FILE_CHOICE=$((RANDOM % 5))
+            case $FILE_CHOICE in
+              0) echo "$TIMESTAMP - $COMMIT_MSG" >> commit_log.txt ;;
+              1) echo "// $TIMESTAMP - $COMMIT_MSG" >> src/utils/helpers.js ;;
+              2) echo "# $TIMESTAMP - $COMMIT_MSG" >> docs/CHANGELOG.md ;;
+              3) echo "<!-- $TIMESTAMP - $COMMIT_MSG -->" >> src/index.html ;;
+              *) echo "$TIMESTAMP,$MSG_TYPE,$MSG" >> data/changes.csv ;;
+            esac
+            
+            # 20% chance to modify multiple files in one commit
+            if [ $((RANDOM % 5)) -eq 0 ]; then
+              echo "$TIMESTAMP - Related change" >> src/utils/logger.js
+              git add src/utils/logger.js
+              COMMIT_MSG="$COMMIT_MSG and update related files"
+            fi
+            
+            # Stage and commit
+            git add .
+            git commit -m "$COMMIT_MSG"
+            
+            # Sleep for a random time between commits (5-120 minutes, weighted towards shorter intervals)
+            RAND_SLEEP=$(( (RANDOM % 100) ))
+            if [ $RAND_SLEEP -lt 60 ]; then  # 60% chance for 5-30 minutes
+                SLEEP_TIME=$(( (RANDOM % 25) + 5 ))
+            elif [ $RAND_SLEEP -lt 90 ]; then  # 30% chance for 30-60 minutes
+                SLEEP_TIME=$(( (RANDOM % 30) + 30 ))
+            else  # 10% chance for 60-120 minutes
+                SLEEP_TIME=$(( (RANDOM % 60) + 60 ))
+            fi
+            
+            # Only sleep if there are more commits to make
+            if [ $i -lt ${{ steps.should_commit.outputs.commit_count }} ]; then
+              echo "Sleeping for $SLEEP_TIME minutes until next commit"
+              sleep $(( SLEEP_TIME * 60 ))
+            fi
+          done
+
+      - name: Push Changes
+        if: steps.should_commit.outputs.should_commit == 'true'
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }} HEAD:main
