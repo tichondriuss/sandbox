@@ -1,5 +1,9 @@
 name: Auto Commit
 
+# ✅ Allow workflow to push changes
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "0 * * * *"  # Run once every hour
@@ -66,9 +70,9 @@ jobs:
       - name: Make commits
         if: steps.should_commit.outputs.should_commit == 'true'
         run: |
-          # Create required folders/files (avoids "No such file" errors)
+          # Create required folders/files (avoid "No such file" errors)
           mkdir -p data docs src src/utils
-          touch data/changes.csv docs/CHANGELOG.md src/utils/helpers.js src/utils/logger.js src/index.html
+          touch data/changes.csv docs/CHANGELOG.md src/utils/helpers.js src/utils/logger.js src/index.html commit_log.txt
 
           for ((i=1; i<=${{ steps.should_commit.outputs.commit_count }}; i++))
           do
@@ -115,7 +119,7 @@ jobs:
             git add .
             git commit -m "$COMMIT_MSG"
 
-            # Sleep strategy between commits (inside same workflow run)
+            # Sleep strategy between commits (within workflow run)
             RAND_SLEEP=$((RANDOM % 100))
             if [ $RAND_SLEEP -lt 60 ]; then
               SLEEP=$((5 + RANDOM % 25))
@@ -136,4 +140,4 @@ jobs:
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }} HEAD:main
+          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git HEAD:main
