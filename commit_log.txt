@@ -2,3 +2,4 @@
 2025-12-08 11:24:32 +08 - feat: add responsive design code style
 2025-12-08 21:36:49 +08 - fix: fix race condition code style
 2025-12-09 15:48:50 +08 - fix: fix UI glitch code style
+2025-12-09 16:39:50 +08 - feat: add responsive design
