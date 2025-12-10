@@ -10,3 +10,4 @@
 // 2025-12-10 19:21:28 +08 - chore: reorganize
 // 2025-12-10 20:57:28 +08 - feat: add UI components code style
 // 2025-12-10 22:26:41 +08 - chore: improve error messages
+// 2025-12-11 03:20:29 +08 - fix: fix UI glitch to improve UX
