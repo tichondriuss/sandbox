@@ -17,3 +17,4 @@
 // 2025-12-11 19:22:00 +08 - chore: add logging
 // 2025-12-11 20:19:00 +08 - fix: fix performance issue
 // 2025-12-11 22:57:05 +08 - fix: fix race condition
+// 2025-12-12 00:35:13 +08 - fix: fix bug
