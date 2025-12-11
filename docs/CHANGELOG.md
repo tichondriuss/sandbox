@@ -6,3 +6,4 @@
 # 2025-12-10 01:38:26 +08 - fix: fix bug
 # 2025-12-11 00:52:01 +08 - feat: add database schema code style
 # 2025-12-11 01:31:01 +08 - feat: add test coverage
+# 2025-12-11 18:29:28 +08 - fix: fix broken link for better performance
