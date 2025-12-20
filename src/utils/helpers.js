@@ -25,3 +25,4 @@
 // 2025-12-20 14:34:39 +08 - chore: add logging
 // 2025-12-20 15:52:39 +08 - fix: fix UI glitch
 // 2025-12-21 01:01:55 +08 - fix: fix performance issue code style
+// 2025-12-21 02:30:18 +08 - feat: add API documentation to improve UX
