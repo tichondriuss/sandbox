@@ -17,3 +17,4 @@
 2025-12-20 04:26:33 +08 - chore: enhance performance for better performance
 2025-12-20 05:21:16 +08 - fix: fix performance issue
 2025-12-20 06:12:16 +08 - chore: update docs
+2025-12-21 04:29:18 +08 - chore: refactor to fix edge case
