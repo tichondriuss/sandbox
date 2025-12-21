@@ -12,3 +12,4 @@
 # 2025-12-12 17:54:12 +08 - fix: fix broken link
 # 2025-12-20 05:17:33 +08 - feat: add user authentication
 # 2025-12-21 13:35:40 +08 - fix: fix build error
+# 2025-12-22 03:55:59 +08 - fix: fix security vulnerability
