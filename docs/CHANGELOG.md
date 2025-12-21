@@ -13,3 +13,4 @@
 # 2025-12-20 05:17:33 +08 - feat: add user authentication
 # 2025-12-21 13:35:40 +08 - fix: fix build error
 # 2025-12-22 03:55:59 +08 - fix: fix security vulnerability
+# 2025-12-22 07:21:20 +08 - fix: fix UI glitch
