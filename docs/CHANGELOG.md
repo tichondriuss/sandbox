@@ -16,3 +16,4 @@
 # 2025-12-22 07:21:20 +08 - fix: fix UI glitch
 # 2025-12-22 22:53:18 +08 - feat: add test coverage
 # 2025-12-22 23:25:54 +08 - fix: fix memory leak
+# 2025-12-23 00:29:54 +08 - feat: add API documentation
