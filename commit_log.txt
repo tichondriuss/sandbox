@@ -26,3 +26,4 @@
 2025-12-22 03:25:58 +08 - fix: fix broken link to fix edge case
 2025-12-22 04:24:55 +08 - chore: improve error messages
 2025-12-23 17:28:35 +08 - feat: add UI components
+2025-12-23 18:10:36 +08 - fix: fix test failure
