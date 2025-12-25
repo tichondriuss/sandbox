@@ -35,3 +35,4 @@
 2025-12-24 06:13:01 +08 - fix: fix memory leak
 2025-12-24 12:04:28 +08 - chore: improve error messages naming convention
 2025-12-24 16:51:56 +08 - feat: add caching layer
+2025-12-25 12:07:40 +08 - chore: optimize
