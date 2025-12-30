@@ -27,3 +27,4 @@
 # 2025-12-29 05:21:06 +08 - feat: add form validation
 # 2025-12-29 18:33:27 +08 - fix: fix race condition
 # 2025-12-29 23:26:46 +08 - feat: add API endpoints
+# 2025-12-30 09:56:20 +08 - fix: fix build error
