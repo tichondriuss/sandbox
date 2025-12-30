@@ -29,3 +29,4 @@
 # 2025-12-29 23:26:46 +08 - feat: add API endpoints
 # 2025-12-30 09:56:20 +08 - fix: fix build error
 # 2025-12-30 21:05:18 +08 - fix: fix typo to fix edge case
+# 2025-12-31 04:27:02 +08 - feat: add database schema naming convention
