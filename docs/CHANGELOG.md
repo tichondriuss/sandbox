@@ -33,3 +33,4 @@
 # 2025-12-31 12:59:31 +08 - fix: fix build error
 # 2025-12-31 18:27:22 +08 - chore: clean up
 # 2025-12-31 20:04:32 +08 - chore: reorganize
+# 2026-01-01 01:21:17 +08 - feat: add API documentation
