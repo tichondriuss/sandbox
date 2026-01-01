@@ -52,3 +52,4 @@
 2025-12-31 17:28:22 +08 - fix: fix test failure to fix edge case
 2026-01-01 20:50:01 +08 - fix: fix broken link naming convention
 2026-01-01 22:53:13 +08 - fix: fix typo
+2026-01-01 23:25:04 +08 - feat: add test coverage to fix edge case
