@@ -50,3 +50,4 @@
 // 2025-12-31 19:21:32 +08 - feat: add database schema naming convention
 // 2026-01-01 12:29:51 +08 - fix: fix typo to improve UX
 // 2026-01-01 18:08:20 +08 - fix: fix security vulnerability
+// 2026-01-02 00:02:04 +08 - feat: add responsive design
