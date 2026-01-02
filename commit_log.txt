@@ -54,3 +54,4 @@
 2026-01-01 22:53:13 +08 - fix: fix typo
 2026-01-01 23:25:04 +08 - feat: add test coverage to fix edge case
 2026-01-02 00:51:04 +08 - chore: improve error messages
+2026-01-02 14:38:14 +08 - feat: add test coverage to fix edge case
