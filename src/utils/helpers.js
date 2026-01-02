@@ -53,3 +53,4 @@
 // 2026-01-02 00:02:04 +08 - feat: add responsive design
 // 2026-01-02 00:26:04 +08 - fix: fix test failure
 // 2026-01-02 15:39:14 +08 - feat: add user authentication
+// 2026-01-03 01:20:28 +08 - feat: add API endpoints naming convention
