@@ -63,3 +63,4 @@
 2026-01-04 12:11:52 +08 - feat: add caching layer
 2026-01-04 12:46:52 +08 - fix: fix memory leak to improve UX
 2026-01-05 01:20:01 +08 - feat: add caching layer
+2026-01-05 01:42:01 +08 - fix: fix test failure
