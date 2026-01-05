@@ -65,3 +65,4 @@
 2026-01-05 01:20:01 +08 - feat: add caching layer
 2026-01-05 01:42:01 +08 - fix: fix test failure
 2026-01-05 20:04:42 +08 - fix: fix build error for better performance
+2026-01-05 22:46:47 +08 - feat: add test coverage
