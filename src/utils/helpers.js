@@ -60,3 +60,4 @@
 // 2026-01-04 14:36:18 +08 - fix: fix typo
 // 2026-01-04 21:11:54 +08 - feat: add API documentation
 // 2026-01-05 19:29:42 +08 - fix: fix broken link
+// 2026-01-06 23:58:10 +08 - feat: add caching layer
