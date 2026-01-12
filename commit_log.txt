@@ -85,3 +85,4 @@
 2026-01-12 13:32:32 +08 - fix: fix test failure
 2026-01-12 19:23:53 +08 - fix: fix broken link
 2026-01-12 22:29:13 +08 - fix: fix UI glitch
+2026-01-12 23:29:43 +08 - fix: fix build error
