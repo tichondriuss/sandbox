@@ -53,3 +53,4 @@
 # 2026-01-08 21:42:34 +08 - feat: add test coverage
 # 2026-01-10 03:22:18 +08 - fix: fix security vulnerability
 # 2026-01-10 07:23:42 +08 - fix: fix broken link
+# 2026-01-12 14:18:32 +08 - chore: add logging
