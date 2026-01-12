@@ -54,3 +54,4 @@
 # 2026-01-10 03:22:18 +08 - fix: fix security vulnerability
 # 2026-01-10 07:23:42 +08 - fix: fix broken link
 # 2026-01-12 14:18:32 +08 - chore: add logging
+# 2026-01-12 23:39:43 +08 - chore: improve error messages for better performance
