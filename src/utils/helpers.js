@@ -75,3 +75,4 @@
 // 2026-01-13 11:41:30 +08 - fix: fix performance issue
 // 2026-01-13 12:20:30 +08 - chore: update docs to fix edge case
 // 2026-01-14 01:29:23 +08 - feat: add error handling to improve UX
+// 2026-01-14 03:23:05 +08 - fix: fix test failure to improve UX
