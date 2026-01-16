@@ -97,3 +97,4 @@
 2026-01-16 15:27:37 +08 - chore: update dependencies
 2026-01-16 15:37:37 +08 - chore: optimize
 2026-01-16 21:39:39 +08 - fix: fix broken link
+2026-01-16 22:11:39 +08 - feat: add test coverage to improve UX
