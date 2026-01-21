@@ -93,3 +93,4 @@
 // 2026-01-20 12:49:30 +08 - fix: fix performance issue to fix edge case
 // 2026-01-20 18:31:45 +08 - chore: improve error messages
 // 2026-01-21 04:14:06 +08 - fix: fix memory leak for better performance
+// 2026-01-21 19:14:27 +08 - chore: update dependencies
