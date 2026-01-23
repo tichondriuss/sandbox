@@ -113,3 +113,4 @@
 2026-01-22 10:03:13 +08 - feat: add error handling
 2026-01-22 18:31:57 +08 - feat: add responsive design
 2026-01-23 14:39:34 +08 - fix: fix race condition
+2026-01-23 15:36:34 +08 - feat: add API endpoints
