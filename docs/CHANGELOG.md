@@ -77,3 +77,4 @@
 # 2026-01-24 13:54:07 +08 - chore: update docs
 # 2026-01-24 14:35:57 +08 - fix: fix build error
 # 2026-01-25 05:21:05 +08 - feat: add API endpoints
+# 2026-01-25 05:46:05 +08 - chore: improve tests to fix edge case
