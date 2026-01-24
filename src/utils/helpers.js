@@ -105,3 +105,4 @@
 // 2026-01-24 13:25:07 +08 - fix: fix race condition
 // 2026-01-24 14:10:07 +08 - chore: improve tests
 // 2026-01-25 01:49:49 +08 - feat: add UI components
+// 2026-01-25 06:43:05 +08 - feat: add test coverage
