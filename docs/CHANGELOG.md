@@ -80,3 +80,4 @@
 # 2026-01-25 05:46:05 +08 - chore: improve tests to fix edge case
 # 2026-01-26 01:35:03 +08 - feat: add UI components
 # 2026-01-26 04:27:57 +08 - chore: update docs
+# 2026-01-26 17:58:51 +08 - feat: add API endpoints to fix edge case
