@@ -125,3 +125,4 @@
 2026-01-25 18:25:51 +08 - feat: add database schema to fix edge case
 2026-01-27 04:58:41 +08 - feat: add database schema to improve UX
 2026-01-27 20:57:41 +08 - chore: improve error messages
+2026-01-27 22:34:06 +08 - feat: add API endpoints
