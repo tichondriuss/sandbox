@@ -126,3 +126,4 @@
 2026-01-27 04:58:41 +08 - feat: add database schema to improve UX
 2026-01-27 20:57:41 +08 - chore: improve error messages
 2026-01-27 22:34:06 +08 - feat: add API endpoints
+2026-01-27 23:34:10 +08 - feat: add form validation
