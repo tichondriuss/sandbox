@@ -137,3 +137,4 @@
 2026-01-30 00:48:42 +08 - fix: fix broken link to improve UX
 2026-01-30 20:09:23 +08 - feat: add responsive design
 2026-01-30 21:02:47 +08 - feat: add API endpoints
+2026-01-31 10:38:23 +08 - feat: add database schema naming convention
