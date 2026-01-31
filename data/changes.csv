@@ -131,3 +131,4 @@
 2026-01-31 00:43:14 +08,chore,optimize
 2026-01-31 10:12:23 +08,fix,fix memory leak
 2026-01-31 10:23:23 +08,fix,fix memory leak
+2026-01-31 15:31:19 +08,feat,add user authentication
