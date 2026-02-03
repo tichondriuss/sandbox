@@ -98,3 +98,4 @@
 # 2026-02-03 12:49:08 +08 - chore: improve tests
 # 2026-02-03 19:36:48 +08 - chore: improve error messages
 # 2026-02-03 21:08:10 +08 - chore: add logging
+# 2026-02-04 07:10:19 +08 - fix: fix security vulnerability
