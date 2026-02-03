@@ -126,3 +126,4 @@
 // 2026-02-01 19:24:16 +08 - fix: fix security vulnerability naming convention
 // 2026-02-02 10:32:31 +08 - fix: fix build error
 // 2026-02-03 13:01:08 +08 - chore: update docs
+// 2026-02-03 18:44:10 +08 - fix: fix typo
