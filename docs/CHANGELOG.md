@@ -96,3 +96,4 @@
 # 2026-02-02 17:55:13 +08 - feat: add database schema to fix edge case
 # 2026-02-02 19:13:51 +08 - fix: fix performance issue
 # 2026-02-03 12:49:08 +08 - chore: improve tests
+# 2026-02-03 19:36:48 +08 - chore: improve error messages
