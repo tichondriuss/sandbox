@@ -128,3 +128,4 @@
 // 2026-02-03 13:01:08 +08 - chore: update docs
 // 2026-02-03 18:44:10 +08 - fix: fix typo
 // 2026-02-05 23:40:57 +08 - fix: fix build error naming convention
+// 2026-02-06 16:34:50 +08 - fix: fix security vulnerability naming convention
