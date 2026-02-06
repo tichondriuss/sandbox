@@ -108,3 +108,4 @@
 # 2026-02-05 22:46:57 +08 - feat: add database schema to fix edge case
 # 2026-02-06 15:00:50 +08 - feat: add UI components
 # 2026-02-06 19:09:56 +08 - feat: add form validation
+# 2026-02-06 21:07:10 +08 - fix: fix broken link
